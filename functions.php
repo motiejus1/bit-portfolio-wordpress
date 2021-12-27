@@ -50,3 +50,27 @@ register_nav_menus(array(
     "menu-1" => __('Primary Header Menu', 'bit-portfolio'),
     "menu-2" => __('Secondary Footer Menu', 'bit-portfolio'),
 ));
+
+function bit_portfolio_customizer_section($wp_customize) {
+
+    $wp_customize->add_section('bit_portfolio_header_settings', array(
+        'title' => __('Header settings', 'bit-portfolio'),
+        'priority' => 101
+    ));
+
+    $wp_customize->add_setting('bit_portfolio_logo_text', array(
+        'default' => 'Logo',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_logo_text', array(
+        'label' => 'Logo text',
+        'description' => 'Change default logo',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 10,
+    )));
+
+}
+
+add_action('customize_register', 'bit_portfolio_customizer_section');

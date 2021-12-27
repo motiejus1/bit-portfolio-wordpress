@@ -1,5 +1,11 @@
+<?php 
+$logo_text = get_theme_mod('bit_portfolio_logo_text');
+?>
+
 <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
-			<h1 id="colorlib-logo"><a href="index.html">elen<span>.</span></a></h1>
+			<h1 id="colorlib-logo">
+                <a href="<?php echo esc_url(get_home_url()); ?>"><?php echo esc_html($logo_text); ?><span>.</span></a>
+            </h1>
 			<!-- <nav id="colorlib-main-menu" role="navigation">
 				<ul>
 					<li class="colorlib-active"><a href="index.html">Home</a></li>
