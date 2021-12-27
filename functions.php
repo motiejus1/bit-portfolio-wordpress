@@ -58,6 +58,8 @@ function bit_portfolio_customizer_section($wp_customize) {
         'priority' => 101
     ));
 
+    //Logo 
+
     $wp_customize->add_setting('bit_portfolio_logo_text', array(
         'default' => 'Logo',
         'sanitize_callback' => ''
@@ -69,6 +71,95 @@ function bit_portfolio_customizer_section($wp_customize) {
         'section' => 'bit_portfolio_header_settings',
         'type' => 'text',
         'priority' => 10,
+    )));
+
+    //Header copyright text before
+
+    $wp_customize->add_setting('bit_portfolio_copyright_text_before_date', array(
+        'default' => 'Copyright',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_copyright_text_before_date', array(
+        'label' => 'Copyright text before date',
+        'description' => 'Change copyright text',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 11,
+    )));
+
+    //Header copyright text after
+
+    $wp_customize->add_setting('bit_portfolio_copyright_text_after_date', array(
+        'default' => 'All rights reserved | This template is made with ',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_copyright_text_after_date', array(
+        'label' => 'Copyright text',
+        'description' => 'Change copyright text after date',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 12,
+    )));
+
+    //Facebook
+
+    $wp_customize->add_setting('bit_portfolio_item_facebook', array(
+        'default' => '',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_item_facebook', array(
+        'label' => 'Facebook url',
+        'description' => 'Facebook url',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 12,
+    )));
+
+    //Twitter
+
+    $wp_customize->add_setting('bit_portfolio_item_twitter', array(
+        'default' => '',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_item_twitter', array(
+        'label' => 'Twitter url',
+        'description' => 'Twitter url',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 12,
+    )));
+
+    //Instagram
+
+    $wp_customize->add_setting('bit_portfolio_item_instagram', array(
+        'default' => '',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_item_instagram', array(
+        'label' => 'Instagram url',
+        'description' => 'Instagram url',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 12,
+    )));
+    //Linkedin
+
+    $wp_customize->add_setting('bit_portfolio_item_linkedin', array(
+        'default' => '',
+        'sanitize_callback' => ''
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_item_linkedin', array(
+        'label' => 'Linkedin url',
+        'description' => 'Linkedin url',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'text',
+        'priority' => 12,
     )));
 
 }

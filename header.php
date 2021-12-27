@@ -1,5 +1,14 @@
 <?php 
 $logo_text = get_theme_mod('bit_portfolio_logo_text');
+$copyright_text_before_date = get_theme_mod('bit_portfolio_copyright_text_before_date');
+$copyright_text_after_date = get_theme_mod('bit_portfolio_copyright_text_after_date');
+
+//Social links
+
+$facebook_url = get_theme_mod('bit_portfolio_item_facebook');
+$twitter_url = get_theme_mod('bit_portfolio_item_twitter');
+$instagram_url = get_theme_mod('bit_portfolio_item_instagram');
+$linkedin_url = get_theme_mod('bit_portfolio_item_linkedin');
 ?>
 
 <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
@@ -27,12 +36,28 @@ $logo_text = get_theme_mod('bit_portfolio_logo_text');
 
 			<div class="colorlib-footer">
 				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<ul>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin"></i></a></li>
-				</ul>
+			  <?php echo esc_html($copyright_text_before_date); ?> &copy;<script>document.write(new Date().getFullYear());</script> 
+              <?php echo esc_html($copyright_text_after_date); ?> 
+              <!-- nekeiciama -->
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+				
+              
+
+              <?php if(!empty($facebook_url) || !empty($twitter_url) || !empty($instagram_url) || !empty($linkedin_url)) : ?>
+                <ul>
+                        <?php if(!empty($facebook_url)) : ?>
+                            <li><a href="<?php echo esc_url($facebook_url) ?>"><i class="icon-facebook"></i></a></li>
+                        <?php endif; ?>
+                        <?php if(!empty($twitter_url)) : ?>
+                            <li><a href="<?php echo esc_url($twitter_url) ?>"><i class="icon-twitter"></i></a></li>
+                        <?php endif; ?>
+                        <?php if(!empty($instagram_url)) : ?>
+                            <li><a href="<?php echo esc_url($instagram_url) ?>"><i class="icon-instagram"></i></a></li>
+                        <?php endif; ?>
+                        <?php if(!empty($linkedin_url)) : ?>
+                            <li><a href="<?php echo esc_url($linkedin_url) ?>"><i class="icon-linkedin"></i></a></li>
+                        <?php endif; ?>
+                    </ul>
+               <?php endif; ?>
 			</div>
 		</aside>
