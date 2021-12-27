@@ -1,44 +1,58 @@
+
+<?php 
+
+$menu_first_title = get_theme_mod('bit_portfolio_footer_menu_first_title');
+$menu_second_title = get_theme_mod('bit_portfolio_footer_menu_second_title');
+$contact_title = get_theme_mod('bit_portfolio_footer_contact_title');
+$contact_address =  get_theme_mod('bit_portfolio_footer_contact_address');
+$contact_phone =  get_theme_mod('bit_portfolio_footer_contact_phone');
+$contact_email =  get_theme_mod('bit_portfolio_footer_contact_email');
+
+$copyright_text_before_date = get_theme_mod('bit_portfolio_footer_copyright_before');
+$copyright_text_after_date = get_theme_mod('bit_portfolio_footer_copyright_after');
+?>
+
+
 <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container px-md-5">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Category</h2>
+                <?php if(!empty($menu_first_title)): ?>
+                    <h2 class="ftco-heading-2"><?php echo $menu_first_title; ?></h2>
+                <?php endif;?>
               <?php 
             
                 wp_nav_menu( array(
-                    'theme_location' => 'menu-2'
+                    'theme_location' => 'menu-2',
+                    'menu_class' => 'list-unstyled categories'
                 ));
             ?>
-              
-              <ul class="list-unstyled categories">
-                <li><a href="#">Photography <span>(6)</span></a></li>
-                <li><a href="#">Fashion <span>(8)</span></a></li>
-                <li><a href="#">Technology <span>(2)</span></a></li>
-                <li><a href="#">Travel <span>(2)</span></a></li>
-              </ul>
             </div>
           </div>
           <div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Archives</h2>
-              <ul class="list-unstyled categories">
-              	<li><a href="#">October 2018 <span>(6)</span></a></li>
-                <li><a href="#">September 2018 <span>(6)</span></a></li>
-                <li><a href="#">August 2018 <span>(8)</span></a></li>
-                <li><a href="#">July 2018 <span>(2)</span></a></li>
-                <li><a href="#">June 2018 <span>(7)</span></a></li>
-              </ul>
+             <?php if(!empty($menu_second_title)): ?>
+                <h2 class="ftco-heading-2"><?php echo $menu_second_title; ?></h2>
+            <?php endif;?>
+
+              <?php 
+            
+                wp_nav_menu( array(
+                    'theme_location' => 'menu-3',
+                    'menu_class' => 'list-unstyled categories'
+                ));
+            ?>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2"><?php echo $contact_title; ?></h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text"><?php echo $contact_address; ?></span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text"><?php echo $contact_phone; ?></span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text"><?php echo $contact_email; ?></span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -48,7 +62,7 @@
           <div class="col-md-12">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <?php echo $copyright_text_before_date; ?>&copy;<script>document.write(new Date().getFullYear());</script><?php $copyright_text_after_date; ?>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

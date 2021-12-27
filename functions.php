@@ -49,9 +49,10 @@ add_action("wp_enqueue_scripts", "bit_portfolio_enqueue");
 register_nav_menus(array(
     "menu-1" => __('Primary Header Menu', 'bit-portfolio'),
     "menu-2" => __('Secondary Footer Menu', 'bit-portfolio'),
+    "menu-3" => __('Archive Footer Menu', 'bit-portfolio'),
 ));
 
-function bit_portfolio_customizer_section($wp_customize) {
+function bit_portfolio_customizer_header_section($wp_customize) {
 
     $wp_customize->add_section('bit_portfolio_header_settings', array(
         'title' => __('Header settings', 'bit-portfolio'),
@@ -164,4 +165,139 @@ function bit_portfolio_customizer_section($wp_customize) {
 
 }
 
-add_action('customize_register', 'bit_portfolio_customizer_section');
+
+function bit_portfolio_customizer_footer_section($wp_customize) {
+
+    $wp_customize->add_section('bit_portfolio_footer_settings', array(
+        'title' => __('Footer settings', 'bit-portfolio'),
+        'priority' => 102
+    ));
+
+ //Menu #1 title 
+
+ $wp_customize->add_setting('bit_portfolio_footer_menu_first_title', array(
+    'default' => 'Category',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_menu_first_title', array(
+    'label' => 'Menu #1 title',
+    'description' => 'Menu #1 title',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+ //Menu #2 title 
+
+ $wp_customize->add_setting('bit_portfolio_footer_menu_second_title', array(
+    'default' => 'Archives',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_menu_second_title', array(
+    'label' => 'Menu #2 title',
+    'description' => 'Menu #2 title',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+// Contact title
+
+$wp_customize->add_setting('bit_portfolio_footer_contact_title', array(
+    'default' => 'Have a question?',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_contact_title', array(
+    'label' => 'Contact title',
+    'description' => 'Contact title',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+
+
+//Contact address
+
+$wp_customize->add_setting('bit_portfolio_footer_contact_address', array(
+    'default' => 'Have a question?',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_contact_address', array(
+    'label' => 'Contact address',
+    'description' => 'Contact address',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+//Contact phone
+$wp_customize->add_setting('bit_portfolio_footer_contact_phone', array(
+    'default' => 'Have a question?',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_contact_phone', array(
+    'label' => 'Contact phone',
+    'description' => 'Contact phone',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+//Contact email
+
+$wp_customize->add_setting('bit_portfolio_footer_contact_email', array(
+    'default' => 'Have a question?',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_contact_email', array(
+    'label' => 'Contact email',
+    'description' => 'Contact email',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+
+//Copyright text before date
+$wp_customize->add_setting('bit_portfolio_footer_copyright_before', array(
+    'default' => 'Have a question?',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_copyright_before', array(
+    'label' => 'Copyright before',
+    'description' => 'Copyright before',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+
+
+//Copyright text after date
+
+//Copyright text before date
+$wp_customize->add_setting('bit_portfolio_footer_copyright_after', array(
+    'default' => 'Have a question?',
+    'sanitize_callback' => ''
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_footer_copyright_after', array(
+    'label' => 'Copyright after',
+    'description' => 'Copyright after',
+    'section' => 'bit_portfolio_footer_settings',
+    'type' => 'text',
+    'priority' => 10,
+)));
+
+
+}
+
+add_action('customize_register', 'bit_portfolio_customizer_header_section');
+add_action('customize_register', 'bit_portfolio_customizer_footer_section');
