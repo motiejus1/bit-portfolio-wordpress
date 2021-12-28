@@ -35,10 +35,10 @@ wp_enqueue_script('bit-portfolio-magnific', get_template_directory_uri() . "/js/
 wp_enqueue_script('bit-portfolio-aos', get_template_directory_uri() . "/js/aos.js" );
 wp_enqueue_script('bit-portfolio-animateNumber', get_template_directory_uri() . "/js/jquery.animateNumber.min.js" );
 wp_enqueue_script('bit-portfolio-datepicker', get_template_directory_uri() . "/js/bootstrap-datepicker.js" );
-wp_enqueue_script('bit-portfolio-timepicker', get_template_directory_uri() . "/js/jquery.timepicker.min.js" );
+// wp_enqueue_script('bit-portfolio-timepicker', get_template_directory_uri() . "/js/jquery.timepicker.min.js" );
 
 wp_enqueue_script('bit-portfolio-scrollax', get_template_directory_uri() . "/js/scrollax.min.js" );
-wp_enqueue_script('bit-portfolio-google-maps', get_template_directory_uri() . "/js/google-map.js" );
+// wp_enqueue_script('bit-portfolio-google-maps', get_template_directory_uri() . "/js/google-map.js" );
 wp_enqueue_script('bit-portfolio-main', get_template_directory_uri() . "/js/main.js" );
 
 
@@ -301,3 +301,17 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfoli
 
 add_action('customize_register', 'bit_portfolio_customizer_header_section');
 add_action('customize_register', 'bit_portfolio_customizer_footer_section');
+
+function bit_portfolio_move_to_footer_scripts() {
+    remove_action('wp_head', 'wp_print_scripts'); //nespausdink man scriptu head'e
+    remove_action('wp_head', 'wp_print_head_scripts', 9 );
+    remove_action('wp_head', 'wp_enqueue_scripts', 1); //scriptai yra nespausdinami apskirtai
+
+    //script atspausdinimo reikia footeryje
+
+    add_action('wp_footer','wp_print_scripts', 5);
+    add_action('wp_footer','wp_enqueue_scripts', 5);
+    add_action('wp_footer','wp_print_head_scripts', 5);
+}
+
+add_action('wp_enqueue_scripts', 'bit_portfolio_move_to_footer_scripts');

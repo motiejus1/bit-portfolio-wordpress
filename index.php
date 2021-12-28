@@ -16,11 +16,11 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<?php  get_header();?>
 		<div id="colorlib-main">
-			<div class="hero-wrap js-fullheight" style="background-image: url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+			<div class="hero-wrap js-fullheight" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>
 				<div class="js-fullheight d-flex justify-content-center align-items-center">
 					<div class="col-md-8 text text-center">
-						<div class="img mb-4" style="background-image: url(images/author.jpg);"></div>
+						<div class="img mb-4" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/author.jpg);"></div>
 						<div class="desc">
 							<h2 class="subheading">Hello I'm</h2>
 							<h1 class="mb-4">Elen Henderson</h1>
@@ -41,13 +41,13 @@
     		<div class="row">
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_1.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_1.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Technology</a></span>
 	              <h3 class="mb-4"><a href="#">The Newest Technology On This Year 2019</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_2.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_2.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -70,13 +70,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_2.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_2.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Travel</a></span>
 	              <h3 class="mb-4"><a href="#">What to pack when visiting Sea</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_1.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_1.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -99,13 +99,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_3.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_3.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Fashion</a></span>
 	              <h3 class="mb-4"><a href="#">Awesome Fashion Trend in For Summer</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_3.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_3.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -128,13 +128,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_4.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_4.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Travel</a></span>
 	              <h3 class="mb-4"><a href="#">10 Most Awesome Place</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_1.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_1.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -157,13 +157,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_5.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_5.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Travel</a></span>
 	              <h3 class="mb-4"><a href="#">10 Most Awesome Beach in Asia</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_2.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_2.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -186,13 +186,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_6.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_6.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Travel</a></span>
 	              <h3 class="mb-4"><a href="#">Top Amazing Places to Go in Summer</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_3.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_3.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -215,13 +215,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_7.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_7.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Fashion</a></span>
 	              <h3 class="mb-4"><a href="#">7 Beginner Photographer’s Mistakes</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_1.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_1.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -244,13 +244,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_8.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_8.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Photography</a>, <a href="#">Travel</a></span>
 	              <h3 class="mb-4"><a href="#">Excited to Visit in Palawan Philippines</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_2.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_2.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -273,13 +273,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_9.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_9.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Technology</a></span>
 	              <h3 class="mb-4"><a href="#">How to Make a Paper Boat in Scratch</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_3.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_3.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -302,13 +302,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_10.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_10.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Fashion</a></span>
 	              <h3 class="mb-4"><a href="#">10 Best Way to Styling Your Lifestyle</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_1.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_1.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -331,13 +331,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_11.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_11.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Fashion</a></span>
 	              <h3 class="mb-4"><a href="#">10 Tips to Become a Fashion Pro</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_2.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_2.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -360,13 +360,13 @@
     			</div>
     			<div class="col-md-4">
     				<div class="blog-entry ftco-animate">
-							<a href="#" class="img img-2" style="background-image: url(images/image_12.jpg);"></a>
+							<a href="#" class="img img-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/image_12.jpg);"></a>
 							<div class="text text-2 pt-2 mt-3">
 								<span class="category mb-3 d-block"><a href="#">Photography</a></span>
 	              <h3 class="mb-4"><a href="#">Visit the Most Amazing Place in North America</a></h3>
 	              <p class="mb-4">Even the all-powerful Pointing has no control about the blind texts it is an almost</p>
 	              <div class="author mb-4 d-flex align-items-center">
-	            		<a href="#" class="img" style="background-image: url(images/person_3.jpg);"></a>
+	            		<a href="#" class="img" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/person_3.jpg);"></a>
 	            		<div class="ml-3 info">
 	            			<span>Written by</span>
 	            			<h3><a href="#">Dave Lewis</a>, <span>Nov. 28, 2018</span></h3>
@@ -399,11 +399,11 @@
 	</div><!-- END COLORLIB-PAGE -->
 
   <!-- loader -->
-  <!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
  
  <?php wp_footer(); ?>
     
