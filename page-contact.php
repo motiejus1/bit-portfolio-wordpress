@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <title><?php wp_title(); ?></title>
@@ -11,12 +10,17 @@
     <?php wp_head();?>
     
   </head>
-  <body <?php body_class(); ?>>
 
+  <body <?php body_class(); ?>>
   <div id="colorlib-page">
     <?php get_header(); ?>
-    <?php get_footer(); ?>
-    </div>
+    <div id="colorlib-main">
+			
+		</div><!-- END COLORLIB-MAIN
+     -->
+	</div><!-- END COLORLIB-PAGE -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-</body>
+  <?php wp_footer(); ?>
+  </body>
 </html>
