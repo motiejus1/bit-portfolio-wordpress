@@ -45,7 +45,7 @@ $twitter_link = get_field('twitter_link');
 							<p class="mb-4"><?php echo $description; ?></p>
                             <?php if(!empty($twitter_link) || !empty($facebook_link) || !empty($instagram_link) || !empty($linkedin_link) ): ?>
 							<ul class="ftco-social mt-3">
-                                <?php if(!empty($twitter_link )): ?>
+                                <?php if(!empty($twitter_link )):?> 
                                     <li class="ftco-animate"><a href="<?php echo $twitter_link; ?>" target="_blank"><span class="icon-twitter"></span></a></li>
                                 <?php endif; ?>
                                 <?php if(!empty($facebook_link )): ?>
