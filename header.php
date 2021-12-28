@@ -3,6 +3,11 @@ $logo_text = get_theme_mod('bit_portfolio_logo_text');
 $copyright_text_before_date = get_theme_mod('bit_portfolio_copyright_text_before_date');
 $copyright_text_after_date = get_theme_mod('bit_portfolio_copyright_text_after_date');
 
+
+//Open in the new tab
+
+$links_target = get_theme_mod( 'bit_portfolio_header_links_target');
+
 //Social links
 
 $facebook_url = get_theme_mod('bit_portfolio_item_facebook');
@@ -42,20 +47,30 @@ $linkedin_url = get_theme_mod('bit_portfolio_item_linkedin');
               <a href="https://colorlib.com" target="_blank">Colorlib</a>
 				
               
-
+                    <!-- Mes galim sukurti bendra nustatyma, kuris arba visas nuorodas atidaro tame paciame lange
+                    ar visas nuorodas atidaro naujame
+                -->
               <?php if(!empty($facebook_url) || !empty($twitter_url) || !empty($instagram_url) || !empty($linkedin_url)) : ?>
-                <ul>
+                <ul>    
+
+                        <?php
+                            $target_attribute = '';
+                            if($links_target) {
+                                $target_attribute = ' target="_blank" ';
+                            }
+                        ?>
+
                         <?php if(!empty($facebook_url)) : ?>
-                            <li><a href="<?php echo esc_url($facebook_url) ?>"><i class="icon-facebook"></i></a></li>
+                            <li><a href="<?php echo esc_url($facebook_url) ?>" <?php echo $target_attribute ?>><i class="icon-facebook"></i></a></li>
                         <?php endif; ?>
                         <?php if(!empty($twitter_url)) : ?>
-                            <li><a href="<?php echo esc_url($twitter_url) ?>"><i class="icon-twitter"></i></a></li>
+                            <li><a href="<?php echo esc_url($twitter_url) ?>" <?php echo $target_attribute ?>><i class="icon-twitter"></i></a></li>
                         <?php endif; ?>
                         <?php if(!empty($instagram_url)) : ?>
-                            <li><a href="<?php echo esc_url($instagram_url) ?>"><i class="icon-instagram"></i></a></li>
+                            <li><a href="<?php echo esc_url($instagram_url) ?>" <?php echo $target_attribute ?>><i class="icon-instagram"></i></a></li>
                         <?php endif; ?>
                         <?php if(!empty($linkedin_url)) : ?>
-                            <li><a href="<?php echo esc_url($linkedin_url) ?>"><i class="icon-linkedin"></i></a></li>
+                            <li><a href="<?php echo esc_url($linkedin_url) ?>" <?php echo $target_attribute ?>><i class="icon-linkedin"></i></a></li>
                         <?php endif; ?>
                     </ul>
                <?php endif; ?>

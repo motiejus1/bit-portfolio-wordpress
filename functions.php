@@ -104,6 +104,22 @@ function bit_portfolio_customizer_header_section($wp_customize) {
         'priority' => 12,
     )));
 
+    //Link target
+
+    $wp_customize->add_setting('bit_portfolio_header_links_target', array(
+        'default' => true,
+        'sanitize_callback' => ''
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'bit_portfolio_header_links_target', array(
+        'label' => 'Open in the new tab?',
+        'description' => 'Choose how social links open same page/new page',
+        'section' => 'bit_portfolio_header_settings',
+        'type' => 'checkbox',
+        'priority' => 12,
+    )));
+
+
     //Facebook
 
     $wp_customize->add_setting('bit_portfolio_item_facebook', array(
