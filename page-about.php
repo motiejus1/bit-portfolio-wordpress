@@ -1,3 +1,20 @@
+<?php 
+
+$background_image = get_field('background-image');
+$author_image = get_field('author-image');
+$subheading = get_field('subheading');
+$name_surname = get_field('name-surname');
+$description = get_field('description');
+
+//Social links
+
+$facebook_link = get_field('facebook_link');
+$instagram_link = get_field('instagram_link');
+$linkedin_link = get_field('linkedin_link');
+$twitter_link = get_field('twitter_link');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,22 +31,35 @@
 
   <body <?php body_class(); ?>>
   <div id="colorlib-page">
+  <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
     <?php get_header(); ?>
     <div id="colorlib-main">
-			<div class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+			<div class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url(<?php echo $background_image; ?>);" data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>
 				<div class="js-fullheight d-flex justify-content-center align-items-center">
 					<div class="col-md-8 text text-center">
-						<div class="img mb-4" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/author.jpg);"></div>
+						<div class="img mb-4" style="background-image: url(<?php echo $author_image; ?>);"></div>
 						<div class="desc">
-							<h2 class="subheading">Hello I'm</h2>
-							<h1 class="mb-4">Elen Henderson</h1>
-							<p class="mb-4">I am A Blogger Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							<h2 class="subheading"><?php echo $subheading; ?></h2>
+							<h1 class="mb-4"><?php echo $name_surname; ?></h1>
+							<p class="mb-4"><?php echo $description; ?></p>
+                            <?php if(!empty($twitter_link) || !empty($facebook_link) || !empty($instagram_link) || !empty($linkedin_link) ): ?>
 							<ul class="ftco-social mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
+                                <?php if(!empty($twitter_link )): ?>
+                                    <li class="ftco-animate"><a href="<?php echo $twitter_link; ?>" target="_blank"><span class="icon-twitter"></span></a></li>
+                                <?php endif; ?>
+                                <?php if(!empty($facebook_link )): ?>
+                                    <li class="ftco-animate"><a href="<?php echo $facebook_link; ?>" target="_blank"><span class="icon-facebook"></span></a></li>
+                                <?php endif; ?>
+                                <?php if(!empty($instagram_link )): ?>
+                                    <li class="ftco-animate"><a href="<?php echo $instagram_link ?>" target="_blank"><span class="icon-instagram"></span></a></li>
+                                <?php endif; ?>
+                                <?php if(!empty($linkedin_link )): ?>
+                                    <li class="ftco-animate"><a href="<?php echo $linkedin_link; ?>" target="_blank"><span class="icon-linkedin"></span></a></li>
+                                <?php endif; ?>
+
+                            </ul>
+                            <?php endif; ?>
 						</div>
 					</div>
 				</div>
