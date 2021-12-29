@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title><?php wp_title(); ?></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-
-    <?php wp_head();?>
-  </head>
-  <body <?php body_class(); ?> >
-    <?php wp_body_open();?>
-	<div id="colorlib-page">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
-		<?php  get_header();?>
+<?php get_header();?> 
+		<!-- funkcija get header ji visur atvaizduoja headeri -->
 		<div id="colorlib-main">
 			<div class="hero-wrap js-fullheight" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>

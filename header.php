@@ -16,6 +16,22 @@ $instagram_url = get_theme_mod('bit_portfolio_item_instagram');
 $linkedin_url = get_theme_mod('bit_portfolio_item_linkedin');
 ?>
 
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+  <head>
+    <title><?php wp_title(); ?></title>
+    <meta charset="<?php bloginfo( 'charset' );?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <?php wp_head();?>
+  </head>
+  <body <?php body_class(); ?> >
+    <?php wp_body_open();?>
+	<div id="colorlib-page">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
 			<h1 id="colorlib-logo">
                 <a href="<?php echo esc_url(get_home_url()); ?>"><?php echo esc_html($logo_text); ?><span>.</span></a>
